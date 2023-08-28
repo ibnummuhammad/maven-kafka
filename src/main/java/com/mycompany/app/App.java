@@ -4,10 +4,6 @@ import com.mycompany.commons.Commons;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-/**
- * Hello world!
- *
- */
 public class App {
     private static final Logger logger = LogManager.getLogger(App.class);
 
