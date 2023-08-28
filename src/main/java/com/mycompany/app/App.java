@@ -13,6 +13,10 @@ public class App {
                 : "producer";
 
         logger.info("Kafka Topic: {}", Commons.EXAMPLE_KAFKA_TOPIC);
-        System.out.println("Done adding com.mycompany.commons.Commons!");
+        logger.info("Kafka Server: {}", Commons.EXAMPLE_KAFKA_SERVER);
+        logger.info("Zookeeper Server: {}", Commons.EXAMPLE_ZOOKEEPER_SERVER);
+        logger.info("GOAL: {}", EXAMPLE_GOAL);
+
+        System.out.println("Done adding Commons!");
     }
 }
