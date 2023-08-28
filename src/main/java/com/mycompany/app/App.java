@@ -6,7 +6,9 @@ package com.mycompany.app;
  */
 public class App {
     public static void main(String[] args) {
-        String EXAMPLE_GOAL = System.getenv("USER");
+        String EXAMPLE_GOAL = System.getenv("EXAMPLE_GOAL") != null
+                ? System.getenv("EXAMPLE_GOAL")
+                : "producer";
         System.out.println("Hello World!");
         System.out.println(EXAMPLE_GOAL);
         System.out.println("Done!");
