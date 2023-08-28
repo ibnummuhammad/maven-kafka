@@ -1,7 +1,7 @@
 package com.mycompany.producer;
 
 import com.mycompany.commons.Commons;
-// import kafka.utils.ZKStringSerializer$;
+import kafka.utils.ZKStringSerializer$;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 // import org.I0Itec.zkclient.ZkClient;
