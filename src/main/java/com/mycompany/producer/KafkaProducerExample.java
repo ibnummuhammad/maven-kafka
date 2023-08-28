@@ -1,7 +1,10 @@
 package com.mycompany.producer;
 
+import com.mycompany.commons.Commons;
+// import kafka.utils.ZKStringSerializer$;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+// import org.I0Itec.zkclient.ZkClient;
 
 public class KafkaProducerExample {
     private static final Logger logger = LogManager
@@ -17,10 +20,9 @@ public class KafkaProducerExample {
         int sessionTimeoutMs = 10 * 1000;
         int connectionTimeoutMs = 8 * 1000;
 
-        System.out.println(sessionTimeoutMs);
-        System.out.println(connectionTimeoutMs);
+        // ZkClient zkClient = new ZKClient(Commons.EXAMPLE_ZOOKEEPER_SERVER,
+        // sessionTimeoutMs, connectionTimeoutMs, ZKStringSerializer$.MODULE$);
 
-        System.out.println("Done adding createTopic!");
-        logger.info("Done adding createTopic logger");
+        System.out.println("Done adding Commons!");
     }
 }
