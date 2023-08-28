@@ -1,5 +1,6 @@
 package com.mycompany.app;
 
+import main.java.com.mycompany.commons.Commons;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -15,7 +16,7 @@ public class App {
                 ? System.getenv("EXAMPLE_GOAL")
                 : "producer";
 
-        logger.info("Kafka Topic:");
-        System.out.println("Done!");
+        logger.info("Kafka Topic: {}", Commons.EXAMPLE_KAFKA_TOPIC);
+        System.out.println("Done adding kafkatopic!");
     }
 }
