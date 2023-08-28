@@ -14,6 +14,12 @@ public class KafkaProducerExample {
     }
 
     private static void createTopic() {
+        int sessionTimeoutMs = 10 * 1000;
+        int connectionTimeoutMs = 8 * 1000;
+
+        System.out.println(sessionTimeoutMs);
+        System.out.println(connectionTimeoutMs);
+
         System.out.println("Done adding createTopic!");
         logger.info("Done adding createTopic logger");
     }
