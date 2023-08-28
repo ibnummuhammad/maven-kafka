@@ -8,9 +8,13 @@ public class KafkaProducerExample {
             .getLogger(KafkaProducerExample.class);
 
     public static void main(String... args) {
-        System.out.println("kafkaproducer println");
-        logger.info("kafkaProducer logger");
-
+        createTopic();
         System.out.println("Done adding kafkaProducer!");
+        logger.info("Done adding kafkaProducer logger");
+    }
+
+    private static void createTopic() {
+        System.out.println("Done adding createTopic!");
+        logger.info("Done adding createTopic logger");
     }
 }
