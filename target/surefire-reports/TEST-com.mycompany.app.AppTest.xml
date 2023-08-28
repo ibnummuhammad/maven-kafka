@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.AppTest" time="0.012" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.AppTest" time="0.013" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ID"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/20.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/ibnu.muhammad/Documents/github/ibnummuhammad/my-app/target/surefire/surefirebooter3515360055163280646.jar /Users/ibnu.muhammad/Documents/github/ibnummuhammad/my-app/target/surefire 2023-08-28T14-11-00_335-jvmRun1 surefire8927343489046383057tmp surefire_017259480608239706302tmp"/>
+    <property name="sun.java.command" value="/Users/ibnu.muhammad/Documents/github/ibnummuhammad/my-app/target/surefire/surefirebooter16807099225628412777.jar /Users/ibnu.muhammad/Documents/github/ibnummuhammad/my-app/target/surefire 2023-08-28T14-28-24_432-jvmRun1 surefire17134611573317569039tmp surefire_03747606135828370348tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/ibnu.muhammad/Documents/github/ibnummuhammad/my-app/target/test-classes:/Users/ibnu.muhammad/Documents/github/ibnummuhammad/my-app/target/classes:/Users/ibnu.muhammad/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/ibnu.muhammad/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/ibnu.muhammad/Documents/github/ibnummuhammad/my-app/target/surefire/surefirebooter3515360055163280646.jar"/>
+    <property name="surefire.real.class.path" value="/Users/ibnu.muhammad/Documents/github/ibnummuhammad/my-app/target/surefire/surefirebooter16807099225628412777.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="20.0.1"/>
@@ -58,5 +58,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.mycompany.app.AppTest" time="0.001"/>
+  <testcase name="shouldAnswerWithTrue" classname="com.mycompany.app.AppTest" time="0.002"/>
 </testsuite>
