@@ -23,6 +23,6 @@ public class KafkaProducerExample {
         // ZkClient zkClient = new ZKClient(Commons.EXAMPLE_ZOOKEEPER_SERVER,
         // sessionTimeoutMs, connectionTimeoutMs, ZKStringSerializer$.MODULE$);
 
-        System.out.println("Done adding Commons!");
+        System.out.println("Done adding ZKStringSerializer!");
     }
 }
