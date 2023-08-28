@@ -1,6 +1,7 @@
 package com.mycompany.app;
 
 import com.mycompany.commons.Commons;
+import com.mycompany.producer.KafkaProducerExample;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -16,6 +17,16 @@ public class App {
         logger.info("Kafka Server: {}", Commons.EXAMPLE_KAFKA_SERVER);
         logger.info("Zookeeper Server: {}", Commons.EXAMPLE_ZOOKEEPER_SERVER);
         logger.info("GOAL: {}", EXAMPLE_GOAL);
+
+        switch (EXAMPLE_GOAL.toLowerCase()) {
+        case "producer":
+            logger.info("producer logger");
+            System.out.println("producer println");
+            KafkaProducerExample.main();
+        default:
+            logger.error("No valid goal to run.");
+            break;
+        }
 
         System.out.println("Done adding Commons!");
     }
