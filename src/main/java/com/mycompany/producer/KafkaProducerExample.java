@@ -23,6 +23,6 @@ public class KafkaProducerExample {
         // ZkClient zkClient = new ZKClient(Commons.EXAMPLE_ZOOKEEPER_SERVER,
         // sessionTimeoutMs, connectionTimeoutMs, ZKStringSerializer$.MODULE$);
 
-        System.out.println("Done adding org.apache.kafka kafka_2.11 2.3.0!");
+        System.out.println("Done adding org.apache.kafka kafka_2.11 2.3.1!");
     }
 }
