@@ -2,10 +2,9 @@ package com.mycompany.producer;
 
 import com.mycompany.commons.Commons;
 import kafka.utils.ZKStringSerializer$;
-import kafka.utils.ZkUtils;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-// import org.I0Itec.zkclient.ZkClient;
+import org.I0Itec.zkclient.ZkClient;
 
 public class KafkaProducerExample {
     private static final Logger logger = LogManager
@@ -21,9 +20,12 @@ public class KafkaProducerExample {
         int sessionTimeoutMs = 10 * 1000;
         int connectionTimeoutMs = 8 * 1000;
 
-        // ZkClient zkClient = new ZKClient(Commons.EXAMPLE_ZOOKEEPER_SERVER,
-        // sessionTimeoutMs, connectionTimeoutMs, ZKStringSerializer$.MODULE$);
+        ZkClient zkClient = new ZkClient(
+                Commons.EXAMPLE_ZOOKEEPER_SERVER,
+                sessionTimeoutMs,
+                connectionTimeoutMs,
+                ZKStringSerializer$.MODULE$);
 
-        System.out.println("Done adding org.apache.kafka kafka_2.12 2.3.1!");
+        System.out.println("Done adding ZkClient!");
     }
 }
