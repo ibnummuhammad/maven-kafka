@@ -1,5 +1,6 @@
 package com.mycompany.producer;
 
+import com.mycompany.commons.Car;
 import com.mycompany.commons.Commons;
 import com.mycompany.commons.Fungs;
 import kafka.utils.ZKStringSerializer$;
@@ -25,6 +26,7 @@ public class KafkaProducerExample {
         Fungs myClassObj1 = new Fungs(7);
         Fungs employee = new Fungs("Jack", "Daniels", 2000);
         Fungs employee2 = new Fungs("pertamax", "keduax");
+        Car mobil = new Car("hijau", "toyota");
 
         // ZkClient zkClient = new ZkClient(
         // Commons.EXAMPLE_ZOOKEEPER_SERVER,
