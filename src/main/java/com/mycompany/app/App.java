@@ -21,13 +21,10 @@ public class App {
         switch (EXAMPLE_GOAL.toLowerCase()) {
         case "producer":
             logger.info("producer logger");
-            System.out.println("producer println");
             KafkaProducerExample.main();
         default:
             logger.error("No valid goal to run.");
             break;
         }
-
-        System.out.println("Done adding Commons!");
     }
 }
