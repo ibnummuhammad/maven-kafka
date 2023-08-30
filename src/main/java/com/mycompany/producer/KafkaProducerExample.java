@@ -23,6 +23,7 @@ public class KafkaProducerExample {
 
         Fungs myClassObj = new Fungs();
         Fungs myClassObj1 = new Fungs(7);
+        Fungs employee = new Fungs("Jack", "Daniels", 2000);
 
         // ZkClient zkClient = new ZkClient(
         // Commons.EXAMPLE_ZOOKEEPER_SERVER,
