@@ -24,4 +24,8 @@ public class Fungs {
         birthYear = year;
         System.out.println(birthYear);
     }
+
+    public Fungs(String first, String last) {
+        this(first, last, -1);
+    }
 }
