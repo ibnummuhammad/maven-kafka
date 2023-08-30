@@ -22,6 +22,7 @@ public class KafkaProducerExample {
         int connectionTimeoutMs = 8 * 1000;
 
         Fungs myClassObj = new Fungs();
+        Fungs myClassObj1 = new Fungs(7);
 
         // ZkClient zkClient = new ZkClient(
         // Commons.EXAMPLE_ZOOKEEPER_SERVER,
