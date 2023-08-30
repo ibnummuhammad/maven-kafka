@@ -1,6 +1,7 @@
 package com.mycompany.producer;
 
 import com.mycompany.commons.Commons;
+import com.mycompany.commons.Fungs;
 import kafka.utils.ZKStringSerializer$;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -20,11 +21,13 @@ public class KafkaProducerExample {
         int sessionTimeoutMs = 10 * 1000;
         int connectionTimeoutMs = 8 * 1000;
 
-        ZkClient zkClient = new ZkClient(
-                Commons.EXAMPLE_ZOOKEEPER_SERVER,
-                sessionTimeoutMs,
-                connectionTimeoutMs,
-                ZKStringSerializer$.MODULE$);
+        Fungs myClassObj = new Fungs();
+
+        // ZkClient zkClient = new ZkClient(
+        // Commons.EXAMPLE_ZOOKEEPER_SERVER,
+        // sessionTimeoutMs,
+        // connectionTimeoutMs,
+        // ZKStringSerializer$.MODULE$);
 
         System.out.println("Done adding ZkClient!");
     }
