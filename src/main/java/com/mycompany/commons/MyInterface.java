@@ -12,4 +12,7 @@ public interface MyInterface {
         System.out.println("ini sayNice");
     }
 
+    public static void print(String text) {
+        System.out.println(text);
+    }
 }
