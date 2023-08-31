@@ -1,11 +1,6 @@
 package com.mycompany.producer;
 
-import com.mycompany.commons.MyInterfaceImpl;
-import com.mycompany.interfes.MyOtherInterface;
-import com.mycompany.interfes.MySubInterface;
 import com.mycompany.commons.Commons;
-import com.mycompany.commons.Fungs;
-import com.mycompany.commons.MyInterface;
 import kafka.utils.ZKStringSerializer$;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -31,25 +26,6 @@ public class KafkaProducerExample {
                 connectionTimeoutMs,
                 ZKStringSerializer$.MODULE$);
 
-        Fungs fungBar = new Fungs("iben", "ski", 789);
-        System.out.println(fungBar.writeText("masuknih"));
-        System.out.println(fungBar.concat("depan", "belakang"));
-        System.out.println(MyInterface.hello);
-        System.out.println("fungsString");
-
-        MyInterface myInterface = new MyInterfaceImpl();
-        myInterface.sayHello();
-        myInterface.sayNice();
-
-        MyOtherInterface myOtherInterface = new MyInterfaceImpl();
-        myOtherInterface.sayGoodbye();
-
-        MyInterface.print("ini MyInterface print");
-
-        MySubInterface mySubInterface = new MyInterfaceImpl();
-        mySubInterface.saiGoodbye();
-        mySubInterface.sayItAll();
-
-        System.out.println("Done adding ZkClient!");
+        System.out.println("Done remove others!");
     }
 }
