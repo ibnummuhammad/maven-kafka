@@ -1,7 +1,6 @@
 package com.mycompany.producer;
 
 import com.mycompany.commons.Commons;
-import kafka.utils.ZKStringSerializer$;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.I0Itec.zkclient.ZkClient;
@@ -23,9 +22,8 @@ public class KafkaProducerExample {
         ZkClient zkClient = new ZkClient(
                 Commons.EXAMPLE_ZOOKEEPER_SERVER,
                 sessionTimeoutMs,
-                connectionTimeoutMs,
-                ZKStringSerializer$.MODULE$);
+                connectionTimeoutMs);
 
-        System.out.println("Done remove others!");
+        System.out.println("Done remove ZKStringSerializer!");
     }
 }
