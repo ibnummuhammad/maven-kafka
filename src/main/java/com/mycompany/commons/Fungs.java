@@ -29,8 +29,10 @@ public class Fungs {
         this(first, last, -1);
     }
 
-    public void writeText(String text) {
+    public String writeText(String text) {
         System.out.println(text); // prints the text parameter to System.out.
         System.out.println(this.firstName);
+
+        return text;
     }
 }

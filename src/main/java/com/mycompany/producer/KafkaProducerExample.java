@@ -29,7 +29,7 @@ public class KafkaProducerExample {
                 ZKStringSerializer$.MODULE$);
 
         Fungs fungBar = new Fungs("iben", "ski", 789);
-        fungBar.writeText("masuknih");
+        System.out.println(fungBar.writeText("masuknih"));
 
         System.out.println("Done adding ZkClient!");
     }
