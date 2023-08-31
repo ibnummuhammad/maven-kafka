@@ -1,6 +1,6 @@
 package com.mycompany.producer;
 
-import com.mycompany.commons.Car;
+import com.mycompany.commons.MyInterfaceImpl;
 import com.mycompany.commons.Commons;
 import com.mycompany.commons.Fungs;
 import com.mycompany.commons.MyInterface;
@@ -35,6 +35,9 @@ public class KafkaProducerExample {
         System.out.println(fungBar.concat("depan", "belakang"));
 
         System.out.println(MyInterface.hello);
+
+        MyInterface myInterface = new MyInterfaceImpl();
+        myInterface.sayHello();
 
         System.out.println("Done adding ZkClient!");
     }
