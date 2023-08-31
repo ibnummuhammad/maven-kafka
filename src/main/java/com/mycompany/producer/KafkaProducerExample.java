@@ -3,6 +3,7 @@ package com.mycompany.producer;
 import com.mycompany.commons.Car;
 import com.mycompany.commons.Commons;
 import com.mycompany.commons.Fungs;
+import com.mycompany.commons.MyInterface;
 import kafka.utils.ZKStringSerializer$;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -32,6 +33,8 @@ public class KafkaProducerExample {
         System.out.println(fungBar.writeText("masuknih"));
 
         System.out.println(fungBar.concat("depan", "belakang"));
+
+        System.out.println(MyInterface.hello);
 
         System.out.println("Done adding ZkClient!");
     }
