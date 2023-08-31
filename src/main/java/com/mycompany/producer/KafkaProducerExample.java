@@ -1,9 +1,12 @@
 package com.mycompany.producer;
 
 import com.mycompany.commons.Commons;
+
+import kafka.utils.ZkUtils;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.I0Itec.zkclient.ZkClient;
+import org.I0Itec.zkclient.ZkConnection;
 
 public class KafkaProducerExample {
     private static final Logger logger = LogManager
@@ -24,6 +27,10 @@ public class KafkaProducerExample {
                 sessionTimeoutMs,
                 connectionTimeoutMs);
 
-        System.out.println("Done remove ZKStringSerializer!");
+        boolean isSecureKafkaCluster = false;
+        ZkUtils zkUtils = new ZkUtils(zkClient, new ZkConnection(Commons.EXAMPLE_ZOOKEEPER_SERVER),
+                isSecureKafkaCluster);
+
+        System.out.println("Done add ZkUtils!");
     }
 }
