@@ -43,8 +43,9 @@ public class KafkaProducerExample {
         int replication = 1;
 
         Properties topicConfig = new Properties();
-        System.out.println("ini Topic");
+        System.out.println("mau masuk topicExists");
         if (!AdminUtils.topicExists(zkUtils, Commons.EXAMPLE_KAFKA_TOPIC)) {
+            System.out.println("mau masuk createTopic");
             AdminUtils.createTopic(zkUtils, Commons.EXAMPLE_KAFKA_TOPIC, partitions, replication, topicConfig,
                     RackAwareMode.Safe$.MODULE$);
             logger.info("Topic {} created.", Commons.EXAMPLE_KAFKA_TOPIC);
