@@ -4,6 +4,7 @@ import com.mycompany.commons.Commons;
 
 import kafka.admin.AdminUtils;
 import kafka.admin.RackAwareMode;
+import kafka.utils.ZKStringSerializer$;
 import kafka.utils.ZkUtils;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -26,10 +27,8 @@ public class KafkaProducerExample {
         int sessionTimeoutMs = 10 * 1000;
         int connectionTimeoutMs = 8 * 1000;
 
-        ZkClient zkClient = new ZkClient(
-                Commons.EXAMPLE_ZOOKEEPER_SERVER,
-                sessionTimeoutMs,
-                connectionTimeoutMs);
+        ZkClient zkClient = new ZkClient(Commons.EXAMPLE_ZOOKEEPER_SERVER, sessionTimeoutMs, connectionTimeoutMs,
+                ZKStringSerializer$.MODULE$);
         System.out.println("ini zkClient");
         System.out.println(zkClient);
 
