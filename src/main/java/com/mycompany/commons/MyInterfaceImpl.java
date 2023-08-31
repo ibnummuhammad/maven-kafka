@@ -22,4 +22,8 @@ public class MyInterfaceImpl implements MyInterface, MyOtherInterface, MySubInte
     public void saiGoodbye() {
         System.out.println("saiGoodby");
     }
+
+    public void sayItAll() {
+        System.out.println("sayItAll");
+    }
 }

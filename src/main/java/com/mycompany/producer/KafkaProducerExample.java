@@ -48,8 +48,8 @@ public class KafkaProducerExample {
         MyInterface.print("ini MyInterface print");
 
         MySubInterface mySubInterface = new MyInterfaceImpl();
-        mySubInterface.saiHello();
         mySubInterface.saiGoodbye();
+        mySubInterface.sayItAll();
 
         System.out.println("Done adding ZkClient!");
     }
