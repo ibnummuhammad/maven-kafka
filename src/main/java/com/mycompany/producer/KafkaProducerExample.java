@@ -31,7 +31,7 @@ public class KafkaProducerExample {
         Fungs fungBar = new Fungs("iben", "ski", 789);
         System.out.println(fungBar.writeText("masuknih"));
 
-        fungBar.concat("depan", "belakang");
+        System.out.println(fungBar.concat("depan", "belakang"));
 
         System.out.println("Done adding ZkClient!");
     }
