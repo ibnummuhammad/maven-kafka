@@ -33,10 +33,9 @@ public class KafkaProducerExample {
 
         Fungs fungBar = new Fungs("iben", "ski", 789);
         System.out.println(fungBar.writeText("masuknih"));
-
         System.out.println(fungBar.concat("depan", "belakang"));
-
         System.out.println(MyInterface.hello);
+        System.out.println("fungsString");
 
         MyInterface myInterface = new MyInterfaceImpl();
         myInterface.sayHello();

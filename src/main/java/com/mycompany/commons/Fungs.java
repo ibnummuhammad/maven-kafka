@@ -16,6 +16,10 @@ public class Fungs {
         System.out.println(number);
     }
 
+    public Fungs(String theString) {
+        System.out.println(theString);
+    }
+
     public Fungs(String first, String last, int year) {
         firstName = first;
         System.out.println(firstName);
