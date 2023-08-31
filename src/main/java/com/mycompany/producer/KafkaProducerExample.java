@@ -2,6 +2,7 @@ package com.mycompany.producer;
 
 import com.mycompany.commons.MyInterfaceImpl;
 import com.mycompany.interfes.MyOtherInterface;
+import com.mycompany.interfes.MySubInterface;
 import com.mycompany.commons.Commons;
 import com.mycompany.commons.Fungs;
 import com.mycompany.commons.MyInterface;
@@ -45,6 +46,10 @@ public class KafkaProducerExample {
         myOtherInterface.sayGoodbye();
 
         MyInterface.print("ini MyInterface print");
+
+        MySubInterface mySubInterface = new MyInterfaceImpl();
+        mySubInterface.saiHello();
+        mySubInterface.saiGoodbye();
 
         System.out.println("Done adding ZkClient!");
     }

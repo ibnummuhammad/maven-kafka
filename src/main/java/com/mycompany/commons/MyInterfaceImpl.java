@@ -1,8 +1,9 @@
 package com.mycompany.commons;
 
 import com.mycompany.interfes.MyOtherInterface;
+import com.mycompany.interfes.MySubInterface;
 
-public class MyInterfaceImpl implements MyInterface, MyOtherInterface {
+public class MyInterfaceImpl implements MyInterface, MyOtherInterface, MySubInterface {
 
     public void sayHello() {
         System.out.println(MyInterface.hello);
@@ -12,5 +13,13 @@ public class MyInterfaceImpl implements MyInterface, MyOtherInterface {
 
     public void sayGoodbye() {
         System.out.println("Goodbye");
+    }
+
+    public void saiHello() {
+        System.out.println("saiHello");
+    }
+
+    public void saiGoodbye() {
+        System.out.println("saiGoodby");
     }
 }
