@@ -16,7 +16,7 @@ public class MyInterfaceImpl implements MyInterface, MyOtherInterface, MySubInte
     }
 
     public void saiHello() {
-        System.out.println("saiHello");
+        System.out.println("saiHello old");
     }
 
     public void saiGoodbye() {

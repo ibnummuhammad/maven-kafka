@@ -2,6 +2,8 @@ package com.mycompany.interfes;
 
 public interface MySuperInterface {
 
-    public void saiHello();
+    default public void saiHello() {
+        System.out.println("saiHello new");
+    };
 
 }
