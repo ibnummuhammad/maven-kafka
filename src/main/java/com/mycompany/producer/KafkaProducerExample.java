@@ -12,13 +12,13 @@ public class KafkaProducerExample {
     private static final Logger logger = LogManager
             .getLogger(KafkaProducerExample.class);
 
-    public static void main(String... args) {
+    public static void main(String... args) throws Exception {
         createTopic();
         System.out.println("Done adding kafkaProducer!");
         logger.info("Done adding kafkaProducer logger");
     }
 
-    private static void createTopic() {
+    private static void createTopic() throws Exception {
         int sessionTimeoutMs = 10 * 1000;
         int connectionTimeoutMs = 8 * 1000;
 
@@ -30,6 +30,8 @@ public class KafkaProducerExample {
 
         Fungs fungBar = new Fungs("iben", "ski", 789);
         System.out.println(fungBar.writeText("masuknih"));
+
+        fungBar.concat("depan", "belakang");
 
         System.out.println("Done adding ZkClient!");
     }

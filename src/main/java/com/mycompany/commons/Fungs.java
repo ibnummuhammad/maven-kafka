@@ -35,4 +35,16 @@ public class Fungs {
 
         return text;
     }
+
+    public String concat(String string1, String string2) throws Exception {
+
+        if (string1 == null) {
+            throw new Exception("string1 was null");
+        }
+        if (string2 == null) {
+            throw new Exception("string2 was null");
+        }
+
+        return string1 + string2;
+    }
 }

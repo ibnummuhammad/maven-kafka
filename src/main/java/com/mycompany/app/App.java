@@ -8,7 +8,7 @@ import org.apache.logging.log4j.LogManager;
 public class App {
     private static final Logger logger = LogManager.getLogger(App.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String EXAMPLE_GOAL = System.getenv("EXAMPLE_GOAL") != null
                 ? System.getenv("EXAMPLE_GOAL")
                 : "producer";
