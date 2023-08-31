@@ -7,4 +7,9 @@ public interface MyInterface {
     int TRUE = 1;
 
     public void sayHello();
+
+    default public void sayNice() {
+        System.out.println("ini sayNice");
+    }
+
 }

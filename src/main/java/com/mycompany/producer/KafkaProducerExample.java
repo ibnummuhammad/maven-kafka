@@ -39,6 +39,7 @@ public class KafkaProducerExample {
 
         MyInterface myInterface = new MyInterfaceImpl();
         myInterface.sayHello();
+        myInterface.sayNice();
 
         MyOtherInterface myOtherInterface = new MyInterfaceImpl();
         myOtherInterface.sayGoodbye();
