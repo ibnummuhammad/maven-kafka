@@ -23,7 +23,7 @@ public class KafkaProducerExample {
         logger.info("Done adding kafkaProducer logger");
     }
 
-    private static void createTopic() throws Exception {
+    private static void createTopic() {
         int sessionTimeoutMs = 10 * 1000;
         int connectionTimeoutMs = 8 * 1000;
 
