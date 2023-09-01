@@ -7,11 +7,13 @@ import kafka.admin.RackAwareMode;
 import kafka.utils.ZKStringSerializer$;
 import kafka.utils.ZkUtils;
 import org.apache.logging.log4j.Logger;
+import org.apache.kafka.clients.producer.Producer;
 import org.apache.logging.log4j.LogManager;
 import org.I0Itec.zkclient.ZkClient;
 import org.I0Itec.zkclient.ZkConnection;
 
 import java.util.Properties;
+import java.util.Random;
 
 public class KafkaProducerExample {
     private static final Logger logger = LogManager
@@ -21,6 +23,17 @@ public class KafkaProducerExample {
         createTopic();
         System.out.println("Done adding kafkaProducer!");
         logger.info("Done adding kafkaProducer logger");
+
+        String[] words = new String[] { "one", "two", "three", "four", "five", "six",
+                "seven", "eight", "nine", "ten" };
+        Random ran = new Random(System.currentTimeMillis());
+
+        final Producer<String, String> producer = createProducer();
+    }
+
+    private static Producer<String, String> createProducer() {
+        System.out.println("masuk createProducer()");
+        return null;
     }
 
     private static void createTopic() {
