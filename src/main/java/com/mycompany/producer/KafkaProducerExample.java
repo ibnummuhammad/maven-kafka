@@ -38,7 +38,8 @@ public class KafkaProducerExample {
 
         try {
             while (true) {
-                System.out.println("Inside try block");
+                System.out.println("masuk try");
+                String word = words[ran.nextInt(words.length)];
                 TimeUnit.SECONDS.sleep(1);
             }
         } catch (InterruptedException e) {
