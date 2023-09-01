@@ -17,6 +17,8 @@ import org.I0Itec.zkclient.ZkConnection;
 
 import java.util.Properties;
 import java.util.Random;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
 
 public class KafkaProducerExample {
     private static final Logger logger = LogManager
@@ -38,12 +40,12 @@ public class KafkaProducerExample {
         // array of size 4.
         int[] arr = new int[4];
         try {
-            int i = arr[4];
-
-            // this statement will never execute
-            // as exception is raised by above statement
-            System.out.println("Inside try block");
-        } catch (ArrayIndexOutOfBoundsException ex) {
+            int i = 67;
+            while (true) {
+                System.out.println("Inside try block");
+                TimeUnit.SECONDS.sleep(1);
+            }
+        } catch (InterruptedException | ArrayIndexOutOfBoundsException ex) {
             System.out.println("Exception caught in catch block");
         } finally {
             System.out.println("finally block executed");
