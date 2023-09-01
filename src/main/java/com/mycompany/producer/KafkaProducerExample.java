@@ -17,7 +17,6 @@ import org.I0Itec.zkclient.ZkConnection;
 
 import java.util.Properties;
 import java.util.Random;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 public class KafkaProducerExample {
@@ -37,15 +36,12 @@ public class KafkaProducerExample {
                 ? Integer.parseInt(System.getenv("EXAMPLE_PRODUCER_INTERVAL"))
                 : 100;
 
-        // array of size 4.
-        int[] arr = new int[4];
         try {
-            int i = 67;
             while (true) {
                 System.out.println("Inside try block");
                 TimeUnit.SECONDS.sleep(1);
             }
-        } catch (InterruptedException | ArrayIndexOutOfBoundsException e) {
+        } catch (InterruptedException e) {
             System.out.println("masuk catch");
             logger.error("An error occurred.", e);
             System.out.println("Exception caught in catch block");
