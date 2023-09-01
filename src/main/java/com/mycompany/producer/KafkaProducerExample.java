@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.apache.logging.log4j.LogManager;
 import org.I0Itec.zkclient.ZkClient;
@@ -17,6 +18,7 @@ import org.I0Itec.zkclient.ZkConnection;
 
 import java.util.Properties;
 import java.util.Random;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 public class KafkaProducerExample {
@@ -40,6 +42,13 @@ public class KafkaProducerExample {
             while (true) {
                 System.out.println("masuk try");
                 String word = words[ran.nextInt(words.length)];
+                String uuid = UUID.randomUUID().toString();
+
+                ProducerRecord<String, String> record = new ProducerRecord<>(
+                        Commons.EXAMPLE_KAFKA_TOPIC, uuid, word);
+                System.out.println("ini record");
+                System.out.println(record);
+
                 TimeUnit.SECONDS.sleep(1);
             }
         } catch (InterruptedException e) {
