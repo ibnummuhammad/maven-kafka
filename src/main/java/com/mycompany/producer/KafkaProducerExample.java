@@ -7,7 +7,10 @@ import kafka.admin.RackAwareMode;
 import kafka.utils.ZKStringSerializer$;
 import kafka.utils.ZkUtils;
 import org.apache.logging.log4j.Logger;
+import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.common.serialization.StringSerializer;
 import org.apache.logging.log4j.LogManager;
 import org.I0Itec.zkclient.ZkClient;
 import org.I0Itec.zkclient.ZkConnection;
@@ -20,23 +23,34 @@ public class KafkaProducerExample {
             .getLogger(KafkaProducerExample.class);
 
     public static void main(String... args) {
+        System.out.println("diatas createTopic()");
         createTopic();
-        System.out.println("Done adding kafkaProducer!");
-        logger.info("Done adding kafkaProducer logger");
 
         String[] words = new String[] { "one", "two", "three", "four", "five", "six",
                 "seven", "eight", "nine", "ten" };
         Random ran = new Random(System.currentTimeMillis());
 
         final Producer<String, String> producer = createProducer();
+        int EXAMPLE_PRODUCER_INTERVAL = System.getenv("EXAMPLE_PRODUCER_INTERVAL") != null
+                ? Integer.parseInt(System.getenv("EXAMPLE_PRODUCER_INTERVAL"))
+                : 100;
     }
 
     private static Producer<String, String> createProducer() {
         System.out.println("masuk createProducer()");
-        return null;
+
+        Properties props = new Properties();
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, Commons.EXAMPLE_KAFKA_SERVER);
+        props.put(ProducerConfig.CLIENT_ID_CONFIG, "KafkaProducerExample");
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+
+        return new KafkaProducer<>(props);
     }
 
     private static void createTopic() {
+        System.out.println("masuk createTopic()");
+
         int sessionTimeoutMs = 10 * 1000;
         int connectionTimeoutMs = 8 * 1000;
 
