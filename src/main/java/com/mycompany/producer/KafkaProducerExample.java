@@ -44,11 +44,13 @@ public class KafkaProducerExample {
             // as exception is raised by above statement
             System.out.println("Inside try block");
         } catch (ArrayIndexOutOfBoundsException ex) {
-            System.out.println("Exception caught in Catch block");
+            System.out.println("Exception caught in catch block");
+        } finally {
+            System.out.println("finally block executed");
         }
 
         // rest program will be executed
-        System.out.println("Outside try-catch clause");
+        System.out.println("Outside try-catch-finally clause");
     }
 
     private static Producer<String, String> createProducer() {
