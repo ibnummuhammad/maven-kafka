@@ -45,7 +45,9 @@ public class KafkaProducerExample {
                 System.out.println("Inside try block");
                 TimeUnit.SECONDS.sleep(1);
             }
-        } catch (InterruptedException | ArrayIndexOutOfBoundsException ex) {
+        } catch (InterruptedException | ArrayIndexOutOfBoundsException e) {
+            System.out.println("masuk catch");
+            logger.error("An error occurred.", e);
             System.out.println("Exception caught in catch block");
         } finally {
             System.out.println("masuk finally");
