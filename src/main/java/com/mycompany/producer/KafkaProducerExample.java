@@ -48,6 +48,9 @@ public class KafkaProducerExample {
         } catch (InterruptedException | ArrayIndexOutOfBoundsException ex) {
             System.out.println("Exception caught in catch block");
         } finally {
+            System.out.println("masuk finally");
+            producer.flush();
+            producer.close();
             System.out.println("finally block executed");
         }
 
