@@ -20,8 +20,8 @@ public class App {
 
         switch (EXAMPLE_GOAL.toLowerCase()) {
         case "producer":
-            logger.info("producer logger");
             KafkaProducerExample.main();
+            break;
         default:
             logger.error("No valid goal to run.");
             break;
